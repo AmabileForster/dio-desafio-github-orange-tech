@@ -7,11 +7,11 @@
 
 // Imprima no console o valor que será gasto para realizar esta viagem.
 
-let price = 5.05; // utilizado a média nacional pelo site da petrobas no dia 28/11/2022.
+let price = 4.93; // utilizado a média do estado RS do preço da gasolina pelo site da petrobas no dia 28/11/2022.
 let media = 13.5; // média baseada no gasto por KM/L do meu ultimo carro.
 let KM = 596; // trajeto saindo de Blumenau, SC para Caxias do Sul, RS, via Rota do Sol.
 
-const calculo = (KM / media) * price;
+const calculation = (KM / media) * price;
 
 
 console.log(calculo.toFixed(2));

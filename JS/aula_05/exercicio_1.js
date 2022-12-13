@@ -5,11 +5,25 @@
 class Carros {
     marca;
     cor;
-    consumo;
+    consumoPorKM;
 
-    constructor(marca, cor, consumo){
+    constructor(marca, cor, consumoPorKM){
         this.marca = marca;
         this.cor = cor;
-        this.consumo = consumo;
+        this.consumoPorKM = consumoPorKM;
+    }
+
+    calculoDeConsumo(distancia,precoCombustivel){
+        return (distancia * this.consumoPorKM) * precoCombustivel
     }
 }
+
+const hb20 = new Carros('Hyundai','Azul', 1/13);
+
+console.log(hb20);
+console.log(hb20.calculoDeConsumo(50, 5));
+
+const tcross = new Carros('Volkswagen','Preto', 1/15);
+
+console.log(tcross);
+console.log(tcross.calculoDeConsumo(86, 5));

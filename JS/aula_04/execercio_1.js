@@ -1,0 +1,30 @@
+// Calculando juros com funções
+// Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço normal de etiqueta e a escolha da condição de pagamento. 
+// Utilize os códigos da tabela a seguir para ler qual a condição de pagamento escolhida e efetuar o cálculo adequado.
+
+// Código Condição de pagamento:
+// 1 - À vista Débito, recebe 10% de desconto;
+// 2 - À vista no Dinheiro ou PIX, recebe 15% de desconto;
+// 3 - Em duas vezes, preço normal de etiqueta sem juros;
+// 4 - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
+
+function desconto(valor,porcentagem){
+    return (valor - (valor * (porcentagem / 100)));
+}
+
+function juros(valor,porcentagem){
+    return (valor + (valor * (porcentagem / 100)));
+}
+
+const price = 100;
+const payment = 4;
+
+if (payment === 1){
+    console.log(desconto(price, 10));
+} else if (payment === 2){
+    console.log(desconto(price, 15));
+} else if (payment === 3){
+    console.log(price);
+} else {
+    console.log(juros(price, 10));
+}
